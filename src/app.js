@@ -1,30 +1,30 @@
 
 require("./styles/app.scss")
 
-///////////////////////
-// var React = require("react")
-// var ReactDOM = require('react-dom')
-
 import RootComponent from './scripts/components/RootComponent'
 
-import {Router,Route,hashHistory,IndexRedirect,IndexRoute} from 'react-router'
-import WaiMaiComponent from './scripts/components/WaiMaiComponent'
-import FinderComponent from './scripts/components/FinderComponent'
-import OrderComponent from './scripts/components/OrderComponent'
-import MineComponent from './scripts/components/MineComponent'
+import HomeComponent from './scripts/components/Home/HomeComponent'
+import CardComponent from './scripts/components/Card/CardComponent'
+import MovieComponent from './scripts/components/Movie/MovieComponent'
+import MoviesComponent from './scripts/components/Movies/MoviesComponent'
+import MyComponent from './scripts/components/My/MyComponent'
+import StoreComponent from './scripts/components/Store/StoreComponent'
 
-// {/* <IndexRedirect to="/main"/> */}
+import {Router,Route,hashHistory,IndexRedirect,IndexRoute} from 'react-router'
+
 ReactDOM.render(
     
     <Router history={hashHistory}>
         <Route path="/" component={RootComponent}>
             
-            <IndexRoute component={WaiMaiComponent}/>
-            <Route path="/waimai" component={WaiMaiComponent}></Route>
-            <Route path="/finder" component={FinderComponent}></Route>
-            <Route path="/order" component={OrderComponent}></Route>
-            <Route path="/mine" component={MineComponent}></Route>
-            <Route path="*" component={WaiMaiComponent}></Route>
+            <IndexRoute component={HomeComponent}/>
+            <Route path="home" component={HomeComponent}></Route>
+            <Route path="movie" component={MovieComponent}></Route>
+            <Route path="movies" component={MoviesComponent}></Route>
+            <Route path="my" component={MyComponent}></Route>
+            <Route path="store" component={StoreComponent}></Route>
+            <Route path="card" component={CardComponent}></Route>
+            <Route path="*" component={HomeComponent}></Route>
 
         </Route>
     </Router>

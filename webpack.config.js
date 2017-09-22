@@ -8,26 +8,9 @@ module.exports = {
         path:__dirname+'/build',
         filename:'app.js'
     },
-    devServer:{
-        proxy:{
-            '/list':{
-                target:'https://m.toutiao.com',
-                changeOrigin:true,
-                secure:false
-            },
-            '/api':{
-                target:'https://m.toutiao.com',
-                changeOrigin:true,
-                pathRewrite: {'^/api' : ''}
-            },
-            '/ele':{
-                target:'https://restapi.ele.me',
-                changeOrigin:true,
-                pathRewrite: {'^/ele' : ''}
-            }
-        },
+    devServer:{        
 		contentBase:'./build',//服务器要在哪个地方开启，默认是在webpack.config.js的路径中
-		port:9000,//端口
+		port:8080,//端口
 		host:'localhost',//域名
 		historyApiFallback:true//是否使用history的go方法
     },

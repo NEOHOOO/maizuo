@@ -1,23 +1,31 @@
 
 
-
+import HeadComponent from './HeadComponent'
+import FooterComponent from './FooterComponent'
 
 class RootComponent extends React.Component {   
     constructor(props,context){
         super(props,context)
 
         this.state={
-          
+          isFromShow:123
         }
     }
     componentWillMount(){
         
     }
+    ToggleFrom(){
+        this.setState({
+            isFromShow:!this.state.isFromShow
+        })
+    }
     render(){
-        console.log(this)
+        let {isFromShow} = this.state
         return (
             <div className="full-height">
-               {this.props.children}
+                <HeadComponent ToggleFrom={this.ToggleFrom.bind(this)}/>
+                {this.props.children}
+                <FooterComponent isFromShow={isFromShow}/>
             </div>
         )
     }

@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body, html {
+  font-size: 0.32rem; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+.header {
+  background: #282828;
+  width: 100%;
+  height: 0.8rem;
+  padding-top: 0.4rem; }
+  .header span, .header i {
+    font-size: 0.32rem;
+    color: #999; }
+  .header div {
+    height: 100%; }
+  .header .s1 {
+    color: #efefef;
+    padding-left: 0.28rem;
+    border-left: 0.02rem solid #000; }
+  .header .icon-menu, .header .icon-icon-test {
+    padding: 0 0.3rem; }
+  .header .s2 {
+    margin-left: 3rem;
+    color: #999; }
+    .header .s2 i {
+      font-size: 0.24rem;
+      margin-left: 0.1rem; }
+
+.footer {
+  background: #282828;
+  width: 75%;
+  height: 12.14rem;
+  position: absolute;
+  top: 1.2rem;
+  left: -75%; }
+  .footer .li1 {
+    border-top: 0.02rem solid #333; }
+  .footer li {
+    line-height: 1rem;
+    border-bottom: 0.02rem solid #333;
+    position: relative; }
+    .footer li a {
+      color: #999;
+      padding-left: 5.3rem; }
+      .footer li a .s {
+        position: absolute;
+        top: 0;
+        left: 0.3rem; }
+    .footer li .icon-you {
+      position: absolute;
+      top: 0.02rem;
+      left: 5.06rem;
+      color: #999; }
+
+.show {
+  position: absolute;
+  top: 1.2rem;
+  left: -75%;
+  animation: myfirst 3s;
+  -moz-animation: myfirst 3s;
+  /* Firefox */
+  -webkit-animation: myfirst 3s;
+  /* Safari and Chrome */
+  -o-animation: myfirst 3s;
+  /* Opera */
+  animation-fill-mode: forwards; }
+
+@keyframes myfirst {
+  from {
+    left: -75%;
+    top: 1.2rem; }
+  to {
+    left: 75%;
+    top: 1.2rem; } }
+
+.full-height {
+  position: relative; }

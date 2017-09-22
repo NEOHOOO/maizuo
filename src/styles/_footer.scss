@@ -1,0 +1,79 @@
+.footer{
+    background: #282828;
+    width: 75%;
+    height:12.14rem;
+    position: absolute;
+    top: 1.2rem;
+    left: -75%;
+    
+    .li1{
+        border-top: 0.02rem solid #333; 
+    }
+    li{
+        line-height: 1rem;
+        border-bottom:0.02rem solid #333; 
+        position: relative;
+        a{
+            color: #999;
+            padding-left: 5.3rem;
+            .s{
+                position: absolute;
+                top: 0;
+                left: 0.3rem;
+            }
+        }
+        .icon-you{
+           position: absolute;
+           top: 0.02rem;
+           left: 5.06rem;
+           color: #999;
+        }
+    }
+}
+.s{
+    display: block
+}
+.show{
+    position: absolute;
+    top: 1.2rem;
+    left: 0%;
+    animation: myfirst 1.5s;
+    -moz-animation: myfirst 1.5s; /* Firefox */
+    -webkit-animation: myfirst 1.5s; /* Safari and Chrome */
+    -o-animation: myfirst 1.5s; /* Opera */
+    animation-fill-mode:forwards;
+}
+@keyframes myfirst{
+
+    from {
+        left: -75%;
+        top: 1.2rem;
+    }
+    to {
+        left: 0;
+        top:1.2rem;
+    }
+
+}
+.hidden{
+    position: absolute;
+    top: 1.2rem;
+    left: -75%;
+    animation: mfirst 1.5s;
+    -moz-animation: mfirst 1.5s; /* Firefox */
+    -webkit-animation: mfirst 1.5s; /* Safari and Chrome */
+    -o-animation: mfirst 1.5s; /* Opera */
+    animation-fill-mode:forwards;
+}
+@keyframes mfirst{
+
+    from {
+        left: 0;
+        top: 1.2rem;
+    }
+    to {
+        left: -75%;
+        top:1.2rem;
+    }
+
+}
